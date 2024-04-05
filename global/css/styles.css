@@ -1,0 +1,63 @@
+/*<!--text & color-->*/
+@font-face {
+    font-family: 'Hero';
+    src: url('/global/fonts/OTF/Hero-Regular.otf') format('opentype');
+}
+
+:root {
+    font-size: 16px;
+    font-family: 'Hero';
+    background-color: var(--bg-primary);
+    --text-primary: #E6E0EB;
+    --bg-primary: #241F2E;
+    --text-highlight: #bbb3cb;
+    --text-link-hover: #E6E0EB;
+
+}
+/*<!--content-->*/
+body {
+    font-family: 'Hero', sans-serif;
+    background-color: var(--bg-primary);
+    color:var(--text-primary)
+}
+
+h1 {
+    font-family: 'Hero', sans-serif;
+    background-color: var(--bg-primary);
+    color:var(--text-highlight)
+}
+
+p {
+    font-family: 'Hero', sans-serif;
+    background-color: var(--bg-primary);
+}
+
+h1, p{
+    position:relative;
+    z-index:1;
+}
+
+.video-section{
+    position:relative
+}
+
+#video-container {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    z-index:0;
+}
+
+#ketamine-background-video {
+    min-width:100%;
+    min-height:100%;
+    width:auto;
+    height:auto;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}

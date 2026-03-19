@@ -12,13 +12,27 @@
     --bg-primary: #241F2E;
     --text-highlight: #bbb3cb;
     --text-link-hover: #E6E0EB;
-
+    --navbar-primary: #443e3b;
+    --navbar-secondary: #8e827d;
 }
 /*<!--content-->*/
 body {
     font-family: 'Hero', sans-serif;
     background-color: var(--bg-primary);
-    color:var(--text-primary)
+    color:var(--text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+.navbar {
+    width: 10vh;
+    height: 3rem;
+    color:var(--navbar-primary)
 }
 
 h1 {
@@ -32,32 +46,24 @@ p {
     background-color: var(--bg-primary);
 }
 
-h1, p{
-    position:relative;
-    z-index:1;
+title {
+    font-family:'Hero';
+    text-transform: full-width;
 }
 
-.video-section{
-    position:relative
+.highlight {
+    font-family:'Hero';
+    text-align:center;
 }
 
-#video-container {
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100vh;
-    overflow:hidden;
-    z-index:0;
+body::-webkit-scrollbar {
+    width: 0.25rem;
 }
 
-#ketamine-background-video {
-    min-width:100%;
-    min-height:100%;
-    width:auto;
-    height:auto;
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
+body::-webkit-scrollbar-track {   
+    background: #241f2e00;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #bbb3cb;
 }

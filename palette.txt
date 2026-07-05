@@ -1,0 +1,4 @@
+dfdfdf white
+9f9f9f light gray
+606060 gray
+202020 dark gray

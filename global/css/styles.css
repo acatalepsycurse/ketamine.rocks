@@ -1,66 +1,147 @@
-/*<!--text & color-->*/
+/* font & color */ 
 @font-face {
     font-family: 'Hero';
     src: url('/global/fonts/OTF/Hero-Regular.otf') format('opentype');
+    font-display: swap;
 }
 
 :root {
     font-size: 16px;
     font-family: 'Hero';
     background-color: var(--bg-primary);
-    --text-primary: #E6E0EB;
-    --bg-primary: #241F2E;
-    --text-highlight: #bbb3cb;
-    --text-link-hover: #E6E0EB;
-    --navbar-primary: #443e3b;
-    --navbar-secondary: #8e827d;
+    --text-primary: #dfdfdf;
+    --bg-primary: #000000;
+    --text-highlight: #6e0a0a;
+    --text-link-hover: #6e0a0a;
+    --navbar-primary: #9f9f9f;
+    --navbar-secondary: #dfdfdf;
 }
-/*<!--content-->*/
+
+/* content */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Hero', sans-serif;
     background-color: var(--bg-primary);
-    color:var(--text-primary);
+    color: var(--text-primary);
     margin: 0;
     padding: 0;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
 }
 
-main{
+main {
     margin-top: 3rem;
     padding: 1rem;
-}
-
-.navbar {
-    width: 10vh;
-    height: 3rem;
-    color:var(--navbar-primary)
+    max-width: 1200px;
+    min-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1 {
     font-family: 'Hero', sans-serif;
-    background-color: var(--bg-primary);
-    color:var(--text-highlight)
+    color: var(--text-highlight);
 }
 
 p {
     font-family: 'Hero', sans-serif;
-    background-color: var(--bg-primary);
 }
 
 title {
-    font-family:'Hero';
-    text-transform: full-width;
+    font-family: 'Hero';
 }
 
 .highlight {
-    font-family:'Hero';
-    text-align:center;
+    font-family: 'Hero';
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 2px solid var(--text-highlight);
+    border-radius: 6px;
+    isolation: isolate;
+    transform: translateZ(0);
 }
 
+.highlight h1 {
+  background: var(--text-highlight);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: translateZ(0);
+  will-change: background-position, filter;
+}
+
+.highlight p {
+    transform: translateZ(0);
+    will-change: color, text-shadow;
+    animation: glow-p 4s linear infinite;
+}
+
+.skull-logo-gif {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+/* navbar */
+/* navbar */
+.navbar {
+    width: 100%;
+    height: 3rem;
+    padding: 0 2rem;
+    border-bottom: 1.5px solid var(--navbar-primary);
+    background-color: var(--bg-primary);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    color: var(--navbar-primary);
+}
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    justify-self: start;
+    min-width: 0;
+}
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    min-width: 0;
+    max-width: 100%;
+    scrollbar-width: none; /* Firefox */
+}
+.navbar-nav::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+.navbar-right {
+    justify-self: end;
+    color: var(--navbar-primary);
+    font-size: 12px;
+}
+.nav-link {
+    color: var(--navbar-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+    white-space: nowrap;
+}
+
+/* scrollbar */
 body::-webkit-scrollbar {
     width: 0.25rem;
 }
 
-body::-webkit-scrollbar-track {   
+body::-webkit-scrollbar-track {
     background: #241f2e00;
 }
 
